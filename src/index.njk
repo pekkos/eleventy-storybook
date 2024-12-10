@@ -26,3 +26,12 @@ title: First testing
         text: 'Hello button!'
     }) }}
 </p>
+
+{% import "components/bettin/bettin.njk" as bettin %}
+<p>Bet you didn't see this coming: 
+    {{ bettin.render({
+    label: "Hello from Eleventy",
+    primary: true,
+    size: "large"
+}) }}
+</p>
