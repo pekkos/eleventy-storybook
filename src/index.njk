@@ -1,0 +1,28 @@
+---
+layout: "layouts/default.njk"
+title: First testing
+---
+
+{%- from "system/component.njk" import component -%}
+
+<h1>Testing Eleventy</h1>
+<p>Promise, just testing</p>
+
+{% set text = 'Btn Text' %}
+<p>Here is a btn: {% include "components/btn/btn.njk" %}
+</p>
+
+{%- from "components/batoon/macro.njk" import batoon -%}
+<p>Down here you may find a batoon: 
+    {{ batoon({
+        class: 'primary',
+        text: 'Batoon FTW!'
+    }) }}
+</p>
+
+<p>And finally, there should be a proper button: 
+    {{ component('button', {
+        class: 'secondary',
+        text: 'Hello button!'
+    }) }}
+</p>
