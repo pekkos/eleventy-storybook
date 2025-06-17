@@ -10,6 +10,7 @@ export default {
     "@storybook/addon-interactions",
   ],
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  staticDirs: ["../public"],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.njk$/,

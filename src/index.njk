@@ -5,7 +5,7 @@ title: First testing
 
 {%- from "system/component.njk" import component -%}
 
-<h1>Testing Eleventy</h1>
+<h1>test</h1>
 <p>Promise, just testing</p>
 
 {% set text = 'Btn Text' %}
@@ -34,4 +34,18 @@ title: First testing
     primary: true,
     size: "large"
 }) }}
+</p>
+
+<h2>batong</h2>
+
+{% import "components/batong_1/batong_1.njk" as batong_1 %}
+
+<p>
+    batong 1:
+    {{ batong_1.render({
+        label: "Batong 1",
+        primary: true,
+        size: "large"
+        })
+    }}
 </p>
